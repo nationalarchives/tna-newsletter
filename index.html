@@ -3,8 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <title>Newsletter HTML snippet</title>
+    <link rel="stylesheet" href="css/newsletter-sass.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+
 </head>
 <body>
+
+<!-- TNA-base newsletter -->
+<div class="row">
+    <div class="newsletter-style">
+
+        <div class="news-icon">
+            <img src="images/tna-newsletter-icon.png" alt="TNA Newsletter Icon"/>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            <h2>Send me The National Archives’ monthly newsletter</h2>
+            <p>A regular round-up of news, blogs and events.</p>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-4">
+            <form name="signup" id="signup" action="http://r1.wiredemail.net/signup.ashx" method="post" role="form">
+                <input type="hidden" name="addressbookid" value="636353"> <!-- homepage and general sign up -->
+                <!-- input type="hidden" name="addressbookid" value="732466" --> <!-- first world war portal sign up -->
+                <input type="hidden" name="userid" value="173459">
+                <input type="hidden" name="ReturnURL"
+                       value="http://nationalarchives.gov.uk/news/subscribe-confirmation.htm">
+                <input type="email" name="Email" id="Email" required="required"
+                       placeholder="Enter your email address">
+                <input id="newsletterSignUp" type="submit" name="Submit" value="Subscribe" class="margin-left-medium">
+            </form>
+        </div>
+    </div>
+</div>
+
+<script href="js/compiled/tna-newsletter.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script href="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
 </body>
 </html>

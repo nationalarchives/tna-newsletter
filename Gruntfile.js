@@ -9,7 +9,7 @@ module.exports = function (grunt) {
             },
             dist: {
                 files: {
-                    'css/base-sass.css': 'css/sass/newsletter-sass.scss'
+                    'css/newsletter-sass.css': 'css/sass/newsletter-sass.scss'
                 }
             }
         },
@@ -19,29 +19,26 @@ module.exports = function (grunt) {
             },
             target: {
                 files: {
-                    'css/base-sass.css.min': ['css/newsletter-sass.css']
+                    'css/newsletter-sass.css.min': ['css/newsletter-sass.css']
                 }
             }
         },
         watch: {
             scripts: {
                 files: 'js/*.js',
-                tasks: ['qunit', 'concat', 'uglify']
+                tasks: ['concat', 'uglify']
             },
             css: {
                 files: 'css/sass/*.scss',
                 tasks: ['sass', 'cssmin']
             }
         },
-        qunit: {
-            all: ['js/tests/**/*.html']
-        },
         concat: {
             options: {
                 separator: ';'
             },
             dist: {
-                src: ['js/scripts'],
+                src: ['js/scripts.js'],
                 dest: 'js/compiled/tna-newsletter.js'
             }
         },
@@ -51,7 +48,7 @@ module.exports = function (grunt) {
             },
             my_target: {
                 files: {
-                    'js/compiled/tna-base.min.js': ['js/compiled/tna-newsletter.js']
+                    'js/compiled/tna-newsletter.min.js': ['js/compiled/tna-newsletter.js']
                 }
             }
         }
@@ -60,11 +57,10 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-contrib-qunit');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
 
     // Default task(s).
-    grunt.registerTask('default', ['sass', 'cssmin', 'concat', 'uglify', 'qunit', 'watch']);
+    grunt.registerTask('default', ['sass', 'cssmin', 'concat', 'uglify','watch']);
 
 };

@@ -1,3 +1,4 @@
-/**
- * Created by mdiaconita on 13/12/2016.
- */
+var name = "Mihai";
+console.log(name);
+
+
