@@ -1,33 +1,54 @@
-.newsletter-style {
+.newsletter-template {
   background: #dddddd;
   width: 100%;
   box-sizing: border-box;
   overflow: hidden; }
-  .newsletter-style .news-icon {
+  @media (max-width: 1155px) {
+    .newsletter-template {
+      border-left: 30px solid #008484; } }
+  .newsletter-template .news-icon {
     background: #008484;
     vertical-align: middle;
     text-align: center;
     width: 157px;
-    height: 121px;
+    height: 127px;
     display: inline-block;
-    padding: 36px 0 0 0;
-    float: left; }
-    .newsletter-style .news-icon img {
+    padding: 38px 0 0 0;
+    float: left;
+    overflow: hidden; }
+    .newsletter-template .news-icon img {
       width: 60px;
       height: 48px; }
-  .newsletter-style h2 {
+    @media (max-width: 1155px) {
+      .newsletter-template .news-icon {
+        display: none; } }
+  .newsletter-template h2 {
     margin: 0;
     padding: 0;
-    font-size: 1.4em;
-    padding: 36px 0 0 0; }
-  .newsletter-style p {
-    padding: 10px 0 0 0; }
-  .newsletter-style form {
+    padding: 36px 0 0 20px;
+    font-weight: 300;
+    font-size: 24px;
+    font-family: 'Bitter', serif; }
+    @media (max-width: 1155px) {
+      .newsletter-template h2 {
+        padding: 10px 15px 10px 7px; } }
+  .newsletter-template p {
+    padding: 10px 0 0 20px; }
+    @media (max-width: 1155px) {
+      .newsletter-template p {
+        padding: 0 0 0 7px; } }
+  .newsletter-template form {
     padding: 40px 0 0 0; }
-    .newsletter-style form input[type="email"] {
-      width: 60%;
+    @media (max-width: 1155px) {
+      .newsletter-template form {
+        padding: 32px 0 0 0; } }
+    @media (max-width: 768px) {
+      .newsletter-template form {
+        padding: 0 0 16px 7px; } }
+    .newsletter-template form input[type="email"] {
+      width: 65%;
       height: 37px; }
-    .newsletter-style form input[type="submit"] {
+    .newsletter-template form input[type="submit"] {
       height: 37px;
       border: none;
       background: #008484;

@@ -1,4 +1,3 @@
 var name = "Mihai";
-console.log(name);
 
-
+alert(name);
