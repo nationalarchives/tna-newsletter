@@ -20,4 +20,6 @@
     }
 }(jQuery));
 
+// Make sure the signup newsletter form matches the ID below
+// By default target element is $('input[name="ReturnURL"]')
 $('#signup').newsletterBackToOrigin();
