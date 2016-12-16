@@ -1,3 +1,4 @@
+// Newsletter form CSS namespace
 .newsletter-template {
   background: #dddddd;
   width: 100%;
@@ -29,6 +30,23 @@
     width: 55%;
     display: inline-block;
     float: left;
+    h2 {
+      margin: 0;
+      padding: 0;
+      padding: 36px 0 0 20px;
+      font-weight: 300;
+      font-size: 24px;
+      font-family: 'Bitter', serif;
+      @media (max-width: 1155px) {
+        padding: 10px 15px 10px 7px;
+      }
+    }
+    p {
+      padding: 10px 0 0 20px;
+      @media (max-width: 1155px) {
+        padding: 0 0 0 7px;
+      }
+    }
     @media (max-width: 970px) {
       width: 60%;
     }
@@ -43,6 +61,9 @@
     padding: 45px 0 0 0;
     float: left;
     form {
+      label {
+        display: none;
+      }
       input {
         &[type="email"] {
           width: 65%;
@@ -80,25 +101,5 @@
       width: 100%;
       padding-right:10px;
     }
-  }
-  h2 {
-    margin: 0;
-    padding: 0;
-    padding: 36px 0 0 20px;
-    font-weight: 300;
-    font-size: 24px;
-    font-family: 'Bitter', serif;
-    @media (max-width: 1155px) {
-      padding: 10px 15px 10px 7px;
-    }
-  }
-  p {
-    padding: 10px 0 0 20px;
-    @media (max-width: 1155px) {
-      padding: 0 0 0 7px;
-    }
-  }
-  label {
-    display: none;
   }
 }
